@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS Dashboard</title>
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>My LMS</h2>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Assignments</a></li>
+            <li><a href="#">Grades</a></li>
+            <li><a href="#">Messages</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <header>
+            <h1 class="head">Welcome to your Dashboard</h1>
+            <div class="header-right">
+                <input type="search" placeholder="Search...">
+                <button>Search</button>
+                <div class="icon-container">
+                    <span class="icon" id="notification-icon">&#x1F514;</span>
+                    <span class="icon" id="profile-icon">&#x1F464;</span>
+                </div>
+            </div>
+        </header>
+        <section class="cards">
+            <div class="card card-1">
+                <div class="card-icon"><i class="fas fa-book"></i></div>
+                <h3>Current Courses</h3>
+                <p>You are enrolled in 5 courses</p>
+            </div>
+            <div class="card card-2">
+                <div class="card-icon"><i class="fas fa-tasks"></i></div>
+                <h3>Upcoming Assignments</h3>
+                <p>3 assignments are due this week</p>
+            </div>
+            <div class="card card-3">
+                <div class="card-icon"><i class="fas fa-envelope"></i></div>
+                <h3>Messages</h3>
+                <p>You have 2 new messages</p>
+            </div>
+            <div class="card card-4">
+                <div class="card-icon"><i class="fas fa-bell"></i></div>
+                <h3>Notifications</h3>
+                <p>You have 5 new notifications</p>
+            </div>
+        </section>
+        <div class="button-container recall-list-container">
+            <button class="button" id="hideButton">Hide</button>
+            <button class="button" id="recallButton">Recall</button>   
+        </div>
+        <div id="recallList" class="hidden-recall-list"> </div>
+        <section class="widgets" id="widgetsContainer">
+            <div class="widget" id="widget1" draggable="true">
+                <h2>Widget 1 - Chart</h2>
+                <div id="chartContainer1" style="height: 300px; width: 100%;"></div>
+            </div>
+            <div class="widget" id="widget2" draggable="true">
+                <h2>Widget 2 - Bar Graph</h2>
+                <canvas id="barGraphContainer" style="height: 300px; width: 100%;"></canvas>
+            </div>
+            <div class="widget" id="widget3" draggable="true">
+                <h2>Widget 3 - Dotted Graph</h2>
+                <canvas id="dottedGraphContainer" style="height: 300px; width: 100%;"></canvas>
+            </div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
